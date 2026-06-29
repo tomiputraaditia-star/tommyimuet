@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Surprise</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio id="bgMusic" autoplay loop>
+  <source src="lagu.mp3" type="audio/mpeg">
+</audio>
+
+<div class="sky">
+  <div class="cloud c1"></div>
+  <div class="cloud c2"></div>
+  <div class="cloud c3"></div>
+</div>
+
+<div id="balloons"></div>
+<div id="confetti"></div>
+
+<button id="musicBtn">🎵 Play Music</button>
+
+<main class="container">
+
+  <section class="slide active">
+    <h1 class="title">TEKAN AKU PWISS</h1>
+    <div class="envelope" onclick="nextSlide()">💌</div>
+    <p class="hint">Klik amplopnya</p>
+  </section>
+
+  <section class="slide">
+    <div class="glass-card">
+      <h1>Happy Birthday</h1>
+      <h2>My Friend</h2>
+      <p>Hari ini adalah hari spesial untuk kamu.</p>
+      <button onclick="nextSlide()">Buka Kejutan</button>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h1>A Letter For YoU</h1>
+    <div class="diary">
+      <p id="typingText"></p>
+    </div>
+    <button onclick="nextSlide()">Lihat Memories</button>
+  </section>
+
+  <section class="slide">
+    <h1>Our LittleMemories 📸</h1>
+    <div class="photo-gallery">
+      <div class="photo-card">
+        <img src="a.jpeg" alt="Foto 1">
+        <p>Pertemanan itu lucu. Berawal dari orang asing, sekarang malah jadi saksi semua drama kehidupan.🤭🫣</p>
+      </div>
+      <div class="photo-card">
+        <img src="b.jpeg" alt="Foto 2">
+        <p>Topinya koboi, kacamatanya mafia. Tapi dompet tetap mahasiswa. 🤠😎💸</p>
+      </div>
+      <div class="photo-card">
+        <img src="c.jpeg" alt="Foto 3">
+        <p>Mungkin nanti yang kita ingat bukan nilai IPK-nya, tapi momen absurd yang entah kenapa selalu bikin ketawa kalau dikenang. 🤓🤣</p>
+      </div>
+    </div>
+    <button onclick="nextSlide()">Cake Time</button>
+  </section>
+
+  <section class="slide">
+    <h1>Make a Wish 🎂</h1>
+    <div class="cake">
+      <div class="flame" onclick="blowCandle()">🔥</div>
+      <div class="candle"></div>
+      <div class="cake-top"></div>
+      <div class="cake-middle"></div>
+      <div class="cake-bottom"></div>
+    </div>
+    <p id="wishText">Klik apinya untuk meniup lilin</p>
+    <button onclick="nextSlide()">Open Gift</button>
+  </section>
+
+
+  <section class="slide">
+    <h1 class="ending">HAPPY BIRTHDAY</h1>
+    <p class="ending-text">Semoga kamu selalu bahagia, sehat, dan semua impianmu tercapai.</p>
+    <button onclick="restart()">Replay</button>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
